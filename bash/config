@@ -1,0 +1,2 @@
+# Editor
+export EDITOR="mate -w"
