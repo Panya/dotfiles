@@ -12,6 +12,9 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# ssh
+alias ssh='ssh -A'
+
 # git
 alias gl='git pull'
 alias gp='git push'
