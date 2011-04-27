@@ -1,4 +1,9 @@
-export PATH="$HOME/bin:$PATH"
+# PATH
+PATH="/usr/local/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin"
+
+test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
+
+export PATH
 
 # Node.js
 export NODE_PATH="/usr/local/lib/node"
