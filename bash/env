@@ -6,4 +6,4 @@ test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
 export PATH
 
 # Node.js
-export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
