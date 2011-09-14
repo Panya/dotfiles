@@ -7,3 +7,18 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
     export TERM='xterm-color'
 fi
+
+# Prompt
+__git_ps1()
+{
+    local b="$(git symbolic-ref HEAD 2>/dev/null)"
+    if [ -n "$b" ]; then
+        if [ -n "$1" ]; then
+            printf "$1" "${b##refs/heads/}"
+        else
+            printf " (%s)" "${b##refs/heads/}"
+        fi
+    fi
+}
+
+export PS1='\[\e]0;\u@\h: \w\a\]\[\e[32;1m\]\u@\[\e[34;1m\]\w \[\e[0;31m\]$(__git_ps1 "(%s)")\[\e[34;1m\]\$ \[\e[0m\]'
