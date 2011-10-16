@@ -30,3 +30,13 @@ alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG
 # chrome
 alias drawrepaint='open /Applications/Google\ Chrome.app --args --show-paint-rects'
 alias draw3drepaint='open /Applications/Google\ Chrome.app --args --show-composited-layer-borders'
+
+# sniff http traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# start an http server from a directory
+alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
+
+# GET, POST, PUT, etc.
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
