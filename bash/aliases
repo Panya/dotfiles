@@ -40,3 +40,7 @@ alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 
 # GET, POST, PUT, etc.
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
+
+# urlencode/urldecode
+alias urlencode="python -c 'import sys, urllib as ul; print ul.quote_plus(sys.stdin.read())'"
+alias urldecode="python -c 'import sys, urllib as ul; print ul.unquote_plus(sys.stdin.read())'"
