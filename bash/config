@@ -8,6 +8,9 @@ else
     export TERM='xterm-color'
 fi
 
+# Vi-like hotkeys
+set -o vi
+
 # Prompt
 __git_ps1()
 {
