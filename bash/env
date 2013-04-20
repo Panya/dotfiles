@@ -3,9 +3,6 @@ PATH="/usr/local/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin"
 
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
 
-# core-utils
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-
 export PATH
 
 # Node.js
