@@ -1,0 +1,28 @@
+[user]
+	name = Mikhail Korepanov
+	email = panyakor@gmail.com
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+
+[alias]
+	st = status --short
+	ci = commit
+	br = branch
+	co = checkout
+	di = diff
+	l = log --graph --pretty=format:'%h %Cblue%cn %Creset%cr %Cgreen%s'
+
+[core]
+	whitespace = trailing-space, space-before-tab, cr-at-eol
+	editor = vim
+
+[merge]
+	tool = opendiff
+
+[push]
+	default = matching
